@@ -17,7 +17,7 @@ gulp.task('webpack', function () {
             }]
         },
         output: {
-            filename: 'bundle.js'
+            filename: 'app.js'
         }
     }))
     .pipe(gulp.dest('./src/public'));
