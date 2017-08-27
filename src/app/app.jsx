@@ -8,7 +8,7 @@ class App extends Component{
         return (
             <div>
                 <Navbar/>
-                <div className="bg-secondary py-5">
+                <div className="py-5">
                     <Calculator/>
                 </div>
             </div>
