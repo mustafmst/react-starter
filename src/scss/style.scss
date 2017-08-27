@@ -1,5 +1,3 @@
-$app-bg: #0098CE;
-
-body{
-    background: $app-bg;
-}
+@import "body";
+@import "navigation";
+@import "calculator";

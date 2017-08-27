@@ -1,12 +1,15 @@
 import React, {Component} from 'react';
 import ReactDom from 'react-dom';
+import Navbar from './navbar/navbar.jsx';
+import Calculator from './calculator/calculator.jsx'
 
 class App extends Component{
     render(){
         return (
             <div>
-                <div className="container text-center">
-                    <h1 className="display-3 col-md-9 mx-auto mt-5">Welcome to React Starter Project</h1>
+                <Navbar/>
+                <div className="bg-secondary py-5">
+                    <Calculator/>
                 </div>
             </div>
         );
