@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "build": "gulp build-prod"
   },
   "author": "Paweł Mstowski",
   "license": "MIT",

@@ -66,6 +66,20 @@ gulp.task('serve',['webpack', 'sass', 'js', 'fonts', 'fa'], function () {
     gulp.watch('./src/scss/**/*.scss', ['sass']);
     gulp.watch('./src/app/**/*.jsx', ['webpack']);
     gulp.watch('./src/index.html').on('change', browserSync.reload)
-})
+});
+
+gulp.task('build-src-prod', ['webpack', 'sass', 'js', 'fonts', 'fa'], function () {
+    return gulp.src([
+        './src/public/*'
+    ])
+    .pipe(gulp.dest('./build/public'));
+});
+
+gulp.task('build-prod', ['build-src-prod'], function () {
+    return gulp.src([
+        './src/index.html'
+    ])
+    .pipe(gulp.dest('./build'));
+});
 
 gulp.task('default', ['serve']);
