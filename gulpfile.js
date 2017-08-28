@@ -1,7 +1,8 @@
 const gulp = require('gulp'),
     webpack = require('webpack-stream'),
     browserSync = require('browser-sync'),
-    sass = require('gulp-sass');
+    sass = require('gulp-sass'),
+    uglify = require('gulp-uglify');
 
 gulp.task('webpack', function () {
     return gulp.src([
@@ -21,6 +22,7 @@ gulp.task('webpack', function () {
                 filename: 'app.js'
             }
         }))
+        .pipe(uglify())
         .pipe(gulp.dest('./src/public'))
         .pipe(browserSync.stream());
 });
