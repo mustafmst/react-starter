@@ -70,7 +70,7 @@ gulp.task('serve',['webpack', 'sass', 'js', 'fonts', 'fa'], function () {
 
 gulp.task('build-src-prod', ['webpack', 'sass', 'js', 'fonts', 'fa'], function () {
     return gulp.src([
-        './src/public/*'
+        './src/public/**/*'
     ])
     .pipe(gulp.dest('./build/public'));
 });
